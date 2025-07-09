@@ -1,0 +1,7 @@
+<svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="68" height="68" transform="translate(1 1)" fill="#22B78F" fill-opacity="0.1"/>
+<path opacity="0.4" d="M1 17V1H17" stroke="#14C2A3"/>
+<path opacity="0.4" d="M18 69L1 69L0.999999 53" stroke="#14C2A3"/>
+<path opacity="0.4" d="M53 0.999999L69 1L69 17" stroke="#14C2A3"/>
+<path opacity="0.4" d="M69 52L69 69L53 69" stroke="#14C2A3"/>
+</svg>

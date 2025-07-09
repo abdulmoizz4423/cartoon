@@ -1,0 +1,297 @@
+
+.homeintro{
+    padding: 258px 70px 0;
+    margin-top: -117px;
+    /* background-image: url('../../assets/bg/homeintrobg.svg'); */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* overflow: hidden; */
+    margin-bottom: -300px;
+}
+
+.homeintro.singlebg{
+    /* background-image: url('../../assets/bg/homeintrosinglebg.png'); */
+    /* background-size: 56%;
+    background-repeat: no-repeat;
+    background-position-x: 82%;
+    background-position-y: 0; */
+    
+}
+
+.homeintro.singlebg .col-lg-7{
+  position: relative;
+  animation: move-right 1s ease 200ms backwards;
+}
+@keyframes move-right {
+  from {
+   opacity: 0;
+   transform: translatex(-100px);
+  }
+  to {
+   opacity: 1;
+   transform: translate(0px);
+  }
+ }
+.homeintro.singlebg .col-lg-7::before{
+  content: '';
+  position: absolute;
+  left: -495px;
+top: -149px;
+width: 904.132px;
+  height: 926.76px;
+  background-image: url(../../assets/images/homeintrobanner2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.homeintrobanner img{
+    width: 190%;
+    animation: move-left 1s ease 200ms backwards;
+
+}
+
+
+@keyframes move-left {
+  from {
+   opacity: 0;
+   transform: translatex(100px);
+  }
+  to {
+   opacity: 1;
+   transform: translate(0px);
+  }
+ }
+.homeintrobanner {
+    position: relative;
+    right: 382px;
+    top: -153px;
+    min-height: 1072px;
+}
+.homeintro h1{
+    color: #FFF;
+    font-family: Trajan Pro Bold;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 88px */
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.homeintro h1 span{
+    color: #FCE866;
+    font-family: Trajan Pro Bold;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: uppercase;
+}
+
+.homeintrobtns{
+    display: flex;
+    justify-content: start;
+    gap: 54px;
+    margin-bottom: 50px;
+
+}
+
+.homeintrobtns button{
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* padding: 14px 55px; */
+    background-position: center;
+    position: relative;
+}
+
+.homeintrobtns button a{
+    position: relative;
+}
+
+
+.startboostbtn{
+    padding: 17px 80px 13px 26px;
+}
+
+.registerbtn{
+    padding: 17px 95px 13px 43px;
+}
+.startboostbtn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 54px;
+    background-image: url('../../assets/bg/startboostbg.svg');
+}
+
+.registerbtn::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 221px;
+    height: 54px;
+    background-image: url('../../assets/bg/registerbg.svg');
+}
+
+
+.startboostbtn:hover::before{
+    background-image: url('../../assets/bg/startboosbghover.svg');
+}
+
+.registerbtn:hover::before{
+    background-image: url('../../assets/bg/registerbghover.svg');
+}
+
+.homeintrobtns button a{
+    color: #FFF;
+    text-align: center;
+    /* Text Body */
+    font-family: redrosereg;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.homeintro p {
+    color: #FFF;
+    font-family: Trajan Pro Bold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    max-width: 500px;
+}
+
+.homeintro p span{
+    color: #FCE866;
+    font-family: Trajan Pro Bold;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.homeintrobanner.homeduobanner img {
+    max-width: 170%;
+  }
+
+  .homeintrobanner.homeduobanner {
+    right: 129px;
+    top: -144px;
+  }
+@media only screen and (max-width: 1440px){
+  
+    .homeintro{
+        padding: 86px 67px 246px;
+        margin: 0;
+    }
+    .homeintrobanner {
+        right: 323px;
+        top: -44px;
+    }
+    .homeintro p {
+        max-width: 501px;
+      }
+      .homeintrobanner.homeduobanner {
+        right: 41px;
+        top: -91px;
+      }
+      .homeintro{
+    margin-bottom: -500px;
+  }
+}
+@media only screen and (max-width: 1300px){
+  .homeintrobanner.homeduobanner {
+    right: 104px;
+    top: -91px;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+
+    .homeintro {
+        padding: 86px 32px 70px;
+        /* margin: 0; */
+      }
+      .homeintrobanner img {
+        width: 166%;
+      }
+      .homeintrobanner {
+        right: 207px;
+      }
+      .homeintro h1 {
+        font-size: 40px;
+        margin-bottom: 34px;
+      }
+      .homeintro h1 span {
+        font-size: 40px;
+      }
+      .homeintrobanner.homeduobanner img {
+        max-width: 154%;
+      }
+      .homeintrobanner.homeduobanner {
+        right: 37px;
+        top: -77px;
+      }
+
+}
+
+@media only screen and (max-width: 900px){
+
+    .homeintrobanner {
+        right: 0;
+        top: 0;
+    }
+
+    .homeintrobanner img {
+        width: 100%;
+      }
+
+      .funtional-tiles {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .funtional-tiles button {
+        font-size: 16px;
+      }
+
+      .homeintrobanner.homeduobanner {
+        right: 0;
+        top: 0;
+      }
+      .homeintro.singlebg .col-lg-7::before {
+        top: -150px;
+        width: 100%;
+      }
+}
+
+@media only screen and (max-width: 767px){
+    .homeintrobtns {
+        gap: 17px;
+        flex-wrap: wrap;
+      }
+
+      .homeintro {
+        padding: 86px 10px 70px;
+      } 
+      .homeintrobanner.homeduobanner {
+        right: -19px;
+        top: 0;
+
+        
+      }
+      .homeintro {
+        margin-bottom: -700px;
+      }
+
+      
+}

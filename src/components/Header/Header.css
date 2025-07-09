@@ -1,0 +1,129 @@
+.App nav{
+    padding: 10px 163px ;
+}
+.App nav .container-fluid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-expand-lg .navbar-collapse{
+    justify-content: center;
+}
+
+.navbar-nav{
+    gap: 48px;
+}
+.App .nav-link {
+    font-family: 'Trajan Pro Bold';
+    color: #CCC;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.loginbtn{
+    font-family: Trajan Pro Bold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    background-color: transparent;
+    text-decoration: none !important;
+    /* background-image: url('../../assets/bg/normalbtnbg.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 12px 46px;
+    position: relative;
+}
+
+.loginbtn::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-image: url('../../assets/bg/normalbtnbg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.loginbtn:hover::before{
+   
+    background-image: url('../../assets/bg/loginbtnbg.svg');
+   
+}
+
+.loginbtn a{
+    text-decoration: none !important;
+    background: linear-gradient(180deg, #FFF 0%, #FCE866 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+@media only screen and (max-width: 1300px){
+
+    .App nav {
+      padding: 10px 60px;
+    }
+  }
+  
+@media only screen and (max-width: 1200px){
+
+    .App nav {
+        padding: 0;
+      }
+
+      .App .nav-link {
+        font-size: 14px;
+      }
+
+      .navbar-nav {
+        gap: 22px;
+      }
+      
+
+
+}
+
+
+@media only screen and (max-width: 900px){
+    .loginbtn{
+        margin: 0 auto;
+    }
+    .navbar-brand{
+        order: 1;
+    }
+
+    .navbar-toggler{
+        order: 3
+    }
+    .navbar-collapse{
+        order: 4;
+    }
+
+    .loginbtn{
+        order : 2;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .loginbtn{
+        margin: 0 auto;
+    }
+    .navbar-brand{
+        order: 1;
+    }
+
+    .navbar-toggler{
+        order: 2
+    }
+    .navbar-collapse{
+        order: 4;
+    }
+
+    .loginbtn{
+        order : 3;
+    }
+}

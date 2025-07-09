@@ -1,0 +1,64 @@
+.functional-sec{
+    /* background-image: url('../../assets/bg/functionbg.svg');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.footer-logo{
+    max-width: 50%;
+}
+
+
+footer{
+    padding: 50px 0 ;
+}
+
+.address{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+footer a{
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+
+footer .container > p{
+    color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 22.4px */
+text-align: center;
+margin-bottom: 10px;
+}
+
+footer .container p.copyright{
+    color: #FFF;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 18px */
+text-align: center;
+}
+
+
+
+@media only screen and (max-width: 1200px){
+    footer a {
+      
+        font-size: 10px;
+      }
+}
+

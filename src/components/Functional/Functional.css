@@ -1,0 +1,559 @@
+.funtional-tiles {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+.functional-sec {
+  z-index: 9999;
+  position: relative;
+}
+.til-img {
+  margin-bottom: 20px;
+}
+
+
+.funtional-tiles button {
+  color: #fff;
+  font-size: 16x;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  width: 100%;
+  background-color: transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+    to top,
+    #fff 0%,
+    #fff 25%,
+    #fff 50%,
+    transparent 100%
+  );
+  border-image-slice: 1;
+  padding: 12px 18px;
+}
+.functional-til {
+  cursor: pointer;
+}
+.functional-til:hover button {
+  color: #fce866;
+}
+
+.functional-til.activefunctionaltile button {
+  color: #fce866;
+}
+.functional-til:hover img {
+  box-shadow: 0px 0px 32px 0px rgba(34, 183, 143, 0.5);
+}
+
+.functional-til.activefunctionaltile img {
+  box-shadow: 0px 0px 32px 0px rgba(34, 183, 143, 0.5);
+}
+
+.funtional-widget {
+  background: rgba(34, 183, 143, 0.1);
+  box-shadow: 0px 0px 28.799999237060547px 0px rgba(34, 183, 143, 0.5);
+  backdrop-filter: blur;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.funtional-widget h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 56px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.funtional-widget h2 span {
+  max-width: 72px;
+  display: block;
+  min-height: 72px;
+  margin-left: 18px;
+}
+
+.approx {
+  display: flex;
+  border: 2px solid #fff;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.approx p {
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
+
+.approx p span {
+  color: #fce866;
+  font-family: Trajan Pro;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+  text-decoration-line: underline;
+  display: block;
+}
+
+.status-img {
+  max-width: 20px;
+}
+
+.boostbtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+.boostbtn {
+  background: rgba(34, 183, 143, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--surface, #fff);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: capitalize;
+  padding: 20px 86px;
+  position: relative;
+}
+.boostbtn:hover {
+  box-shadow: 0px 0px 32px 0px rgba(34, 183, 143, 0.50);
+
+}
+.boostbtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/bg/widgtbtnbg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.boostbtn.activeboostbtn {
+  border: 2px solid var(--primary, #14c2a3);
+  background: rgba(34, 183, 143, 0.1);
+  box-shadow: 0px 0px 32px 0px rgba(34, 183, 143, 0.5);
+}
+.sldierpart {
+  margin-bottom: 35px;
+}
+
+.checkinputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkinputs input {
+ 
+  border-radius: 0 !important;
+  display: none;
+}
+label{
+  position: relative;
+  padding-left: 40px;
+  padding-top: 2px;
+}
+
+label span{
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/bg/checkbox.svg');
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.checkinputs input:checked + label span::before{
+  content: '';
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  background-image: url(../../assets/bg/tick.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.checkinputs label {
+  color: var(--surface, #fff);
+  font-family: redrosereg;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.numberrangeinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.numberrangeinput input {
+  padding: 12px;
+  color: #fff;
+  text-align: center;
+  font-family: redrosereg;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: capitalize;
+  border: 1.6px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  max-width: 150px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  z-index: 9999999;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.numberrangeinput button {
+  padding: 17px 32px 11px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--primary, #14c2a3);
+  color: var(--surface, #fff);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+  text-transform: capitalize;
+  border: 1px solid transparent;
+}
+
+.numberrangeinput button:hover {
+  background: transparent;
+  border-color: #14c2a3;
+}
+
+.numberrangeinput span {
+  color: #fff;
+  font-family: redrosereg;
+  font-size: 19.2px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.4px; /* 116.667% */
+  text-transform: capitalize;
+  
+}
+
+.preferences {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  position: relative;
+}
+
+.preferences p {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 56px */
+}
+
+.preftile {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.preimg {
+  max-width: 100px;
+}
+.preftile button {
+  color: var(--surface, #fff);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: capitalize;
+  max-width: 220px;
+  padding: 12px;
+  height: 85px;
+  background: rgba(34, 183, 143, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.duoboostblock h2 {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 58.8px */
+}
+
+.duoboostblock p {
+  color: var(--surface, #fff);
+  font-family: redrosereg;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 145.455% */
+}
+
+.duoboostblock button {
+  color: #fff;
+  text-align: center;
+  font-family: redrosereg;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 12px 28px;
+  width: 100%;
+  position: relative;
+}
+
+.duoboostblock button::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 259px;
+  height: 77px;
+  background-image: url("../../assets/bg/redbtnbg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.duoboostblock button:hover::before {
+  background-image: url("../../assets/bg/redbtnbg.png");
+}
+
+.duoboostblock {
+  padding-bottom: 50px;
+  position: relative;
+  padding-left: 115px;
+}
+
+.duoboostblock::before{
+  content: '';
+  width: 823.747px;
+  height: 844.363px;
+  position: absolute;
+  top: -293px;
+  left: -108px;
+  background-image:url('../../assets/images/hookbanner.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 99;
+}
+.rangeslidervalues {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+  color: var(--surface, #fff);
+  text-align: center;
+  font-family: Trajan Pro;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: capitalize;
+  padding-left: 20px;
+  margin-right: -15px;
+}
+
+.App .range-slider .range-slider__range {
+  background: #951a1d;
+}
+
+.App .range-slider .range-slider__thumb {
+  background: #951a1d;
+}
+.App .range-slider {
+  background: #14c2a3;
+}
+
+.preftile.activepreftile img,
+.preftile.activepreftile button {
+  box-shadow: 0px 0px 32px 0px rgba(34, 183, 143, 0.5);
+}
+
+
+
+
+@media only screen and (max-width: 1440px) {
+  .funtional-tiles button {
+    font-size: 14px;
+    padding: 12px 12px;
+  }
+  .approx p {
+    font-size: 8px;
+  }
+  .approx {
+    padding: 5px;
+  }
+  .duoboostblock::before {
+    width: 614.747px;
+    top: -248px;
+    left: -124px;
+    z-index: 99;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .funtional-tiles button {
+    font-size: 11px;
+  }
+  .boostbtn {
+    padding: 14px 53px;
+  }
+  .boostbtn::before {
+    background-size: contain;
+  }
+  .preftile button {
+    font-size: 9px;
+  }
+
+  .duoboostblock button::before {
+    width: 215px;
+  }
+  .duoboostblock button {
+    font-size: 17px;
+  }
+  .duoboostblock {
+    padding-left: 79px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .duoboostblock {
+    padding-left: 0px;
+  }
+  .duoboostblock::before {
+    content: none;
+  }
+  .status-tags {
+    max-width: 300px;
+    margin: 0 auto 30px 0;
+  }
+  .preferences {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .duoboostblock h2,
+  .duoboostblock p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .functional-til {
+    width: 42%;
+  }
+  .funtional-tiles button {
+    font-size: 9px;
+  }
+  .boostbtns {
+    flex-wrap: wrap;
+  }
+  .funtional-widget h2 {
+    font-size: 19px;
+    gap: 10px;
+  }
+  .funtional-widget {
+    padding: 20px;
+  }
+
+  .numberrangeinput input {
+    max-width: 98px;
+  }
+  .numberrangeinput {
+    flex-wrap: wrap;
+  }
+  .preferences p {
+    text-align: center;
+    width: 100%;
+  }
+  .preftile {
+    width: 46%;
+  }
+  .preimg {
+    max-width: 47px;
+  }
+  .preftile button {
+    font-size: 8px;
+    padding: 8px 2px;
+    height: 49px;
+    width: 100%;
+    line-height: 1.3;
+  }
+  .approx p {
+    font-size: 8px;
+    display: flex;
+    gap: 10px;
+  }
+
+
+  .rangeslidervalues{
+    padding-left: 0;
+    padding-right: 10px;
+
+  }
+
+  .rangeslidervalues {
+    font-size: 10px;
+  }
+
+  .checkinputs label{
+    font-size: 10px;
+    padding-top: 7px;
+  }
+  .form-check{
+    padding-left: 0;
+  }
+  .checkinputs {
+    gap: 24px;
+  }
+  .duoboostblock::before {
+    content: none;
+  }
+  .duoboostblock {
+    padding-left: 0;
+  }
+  
+}
