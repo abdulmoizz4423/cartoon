@@ -12,7 +12,7 @@ const Homeintro = (prop) => {
             <div className="row">
                 <div className="col-lg-7">
                      <h1>
-                        GET DESIRED RANK <span>IN SWIFTBOOST</span>
+                        GET DESIRED RANK <span>IN MOIZ</span>
                      </h1>
                      <div className="homeintrobtns">
                         <button className='startboostbtn'>
