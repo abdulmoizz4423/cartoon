@@ -42,8 +42,8 @@ pipeline {
                     def accountId = sh(script: "aws sts get-caller-identity --query 'Account' --output text", returnStdout: true).trim()
                     def ecrUri = "${accountId}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}"
                     sh """
-                        sudo docker build -t ${ECR_REPO_NAME}:${IMAGE_TAG} .
-                        sudo docker tag ${ECR_REPO_NAME}:${IMAGE_TAG} ${ecrUri}:${IMAGE_TAG}
+                        docker build -t ${ECR_REPO_NAME}:${IMAGE_TAG} .
+                        docker tag ${ECR_REPO_NAME}:${IMAGE_TAG} ${ecrUri}:${IMAGE_TAG}
                     """
                 }
             }
@@ -54,7 +54,7 @@ pipeline {
                 script {
                     def accountId = sh(script: "aws sts get-caller-identity --query 'Account' --output text", returnStdout: true).trim()
                     def ecrUri = "${accountId}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}"
-                    sh "sudo docker push ${ecrUri}:${IMAGE_TAG}"
+                    sh "docker push ${ecrUri}:${IMAGE_TAG}"
                 }
             }
         }
@@ -64,7 +64,7 @@ pipeline {
                 script {
                     def accountId = sh(script: "aws sts get-caller-identity --query 'Account' --output text", returnStdout: true).trim()
                     def ecrUri = "${accountId}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}"
-                    sh "sudo docker run -d --name my-app-container -p 3000:3000 ${ecrUri}:${IMAGE_TAG}"
+                    sh "docker run -d --name my-app-container -p 3000:3000 ${ecrUri}:${IMAGE_TAG}"
                 }
             }
         }
