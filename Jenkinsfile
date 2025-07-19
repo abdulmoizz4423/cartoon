@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'sonar' }
 
     environment {
         AWS_REGION = 'us-east-1'
@@ -19,7 +19,10 @@ pipeline {
 
         stage('Configure AWS CLI') {
             steps {
-                withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: "${env.AWS_CREDENTIALS_ID}"]]) {
+                withCredentials([[
+                    $class: 'AmazonWebServicesCredentialsBinding',
+                    credentialsId: "${env.AWS_CREDENTIALS_ID}"
+                ]]) {
                     sh '''
                         aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
                         aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
@@ -63,7 +66,6 @@ pipeline {
         stage('Stop Existing Container') {
             steps {
                 script {
-                    // Stop and remove the container if it exists
                     sh """
                         if [ \$(docker ps -a -q -f name=${CONTAINER_NAME}) ]; then
                             echo "Stopping and removing existing container..."
