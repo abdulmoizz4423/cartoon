@@ -6,6 +6,7 @@ pipeline {
         ECR_REPO_NAME = 'my-app-repo'
         IMAGE_TAG = "${env.BUILD_NUMBER}"
         AWS_CREDENTIALS_ID = 'aws-cred-id' // Replace with your Jenkins AWS credential ID
+        CONTAINER_NAME = 'my-app-container'
     }
 
     stages {
@@ -59,12 +60,29 @@ pipeline {
             }
         }
 
+        stage('Stop Existing Container') {
+            steps {
+                script {
+                    // Stop and remove the container if it exists
+                    sh """
+                        if [ \$(docker ps -a -q -f name=${CONTAINER_NAME}) ]; then
+                            echo "Stopping and removing existing container..."
+                            docker stop ${CONTAINER_NAME} || true
+                            docker rm ${CONTAINER_NAME} || true
+                        else
+                            echo "No existing container named '${CONTAINER_NAME}' found."
+                        fi
+                    """
+                }
+            }
+        }
+
         stage('Run Docker Container') {
             steps {
                 script {
                     def accountId = sh(script: "aws sts get-caller-identity --query 'Account' --output text", returnStdout: true).trim()
                     def ecrUri = "${accountId}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPO_NAME}"
-                    sh "docker run -d --name my-app-container -p 3000:3000 ${ecrUri}:${IMAGE_TAG}"
+                    sh "docker run -d --name ${CONTAINER_NAME} -p 3000:3000 ${ecrUri}:${IMAGE_TAG}"
                 }
             }
         }
